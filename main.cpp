@@ -395,6 +395,7 @@ abort:
    Vix_ReleaseHandle(jobHandle);
    return err;
 } //directoryExistsInGuest
+
 int main(int argc, char * argv[])
 {
    VixHandle hostHandle = VIX_INVALID_HANDLE;
@@ -403,13 +404,13 @@ int main(int argc, char * argv[])
    
    apiversion = -1;
    serviceProvider = VIX_SERVICEPROVIDER_VMWARE_VI_SERVER;
-   hostname = "https://10.20.84.230/sdk";
+   hostname = "https://ipaddress/sdk";
    hostport = 902;
    username = "root";
-   password = "ca$hc0w";
+   password = "password";
    guestUsername = "";
    guestPassword = "";
-   vmxFilePath = "[storage2 (1)] win-xp-32-pro-sp2-esx3/win-xp-32-pro-sp2-esx3.vmx";
+   vmxFilePath = "/path/to/vmx/file";
    options = 0;
 
    connect(&hostHandle);
